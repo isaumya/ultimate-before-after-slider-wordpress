@@ -3,7 +3,7 @@
 Plugin Name: Ultimate Before After Slider
 Plugin URI:  https://www.isaumya.com/
 Description: Show before and after images with multiple slides
-Version:     1.0
+Version:     1.1
 Author:      Saumya Majumder
 Author URI:  https://www.isaumya.com/
 Text Domain: ubas
@@ -54,7 +54,6 @@ class UltimateBeforeAfterSlider {
 		add_action( 'admin_enqueue_scripts', array( $this, 'load_button_script' ) );
 		add_filter( 'mce_external_plugins', array( $this, 'mce_external_button' ) );
 		add_filter( 'mce_buttons', array( $this, 'mce_buttons' ) );
-		add_action( 'admin_head', array( $this, 'add_favicon' ) );
 		add_filter( 'mce_external_languages', array( $this, 'add_tinymce_lang' ) );
 	}
 
