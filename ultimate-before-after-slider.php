@@ -3,7 +3,7 @@
 Plugin Name: Ultimate Before After Slider
 Plugin URI:  https://github.com/isaumya/ultimate-before-after-slider-wordpress
 Description: Show before and after images with multiple slides
-Version:     1.4
+Version:     1.5
 Author:      Saumya Majumder
 Author URI:  https://www.isaumya.com/
 Text Domain: ubas
@@ -274,7 +274,7 @@ class UltimateBeforeAfterSlider {
 		if ( is_admin() ) { // note the use of is_admin() to double check that this is happening in the admin
 			$config = array(
 				'slug' => plugin_basename( __FILE__ ), // this is the slug of your plugin
-				'proper_folder_name' => 'ultimate-before-after-slider -wordpress', // this is the name of the folder your plugin lives in
+				'proper_folder_name' => 'ultimate-before-after-slider-wordpress', // this is the name of the folder your plugin lives in
 				'api_url' => 'https://api.github.com/repos/isaumya/ultimate-before-after-slider-wordpress', // the GitHub API url of your GitHub repo
 				'raw_url' => 'https://raw.github.com/isaumya/ultimate-before-after-slider-wordpress/master', // the GitHub raw url of your GitHub repo
 				'github_url' => 'https://github.com/isaumya/ultimate-before-after-slider-wordpress', // the GitHub url of your GitHub repo
@@ -289,8 +289,6 @@ class UltimateBeforeAfterSlider {
 		}
 	}
 }
-
-
 
 //Let's execute the class and let the show begin
 $letsExecute = new UltimateBeforeAfterSlider();
