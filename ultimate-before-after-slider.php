@@ -55,6 +55,8 @@ class UltimateBeforeAfterSlider {
 		add_filter( 'mce_external_plugins', array( $this, 'mce_external_button' ) );
 		add_filter( 'mce_buttons', array( $this, 'mce_buttons' ) );
 		add_filter( 'mce_external_languages', array( $this, 'add_tinymce_lang' ) );
+		// initiate the github updater
+		add_action( 'init', array( $this, 'initiate_github_updater' ) );
 	}
 
 	//The actual before after slider function
@@ -258,6 +260,33 @@ class UltimateBeforeAfterSlider {
 	public function mce_buttons( $buttons ) {
 		array_push( $buttons, 'ubas_mce_button' );
 		return $buttons;
+	}
+
+	/***************************************************************
+	* Method to call the plugin update directly from Github
+	***************************************************************/
+	public function initiate_github_updater() {
+		// Including the actual Github updater Class
+		include_once 'updater.php';
+
+		// Defining Github force update
+		define( 'WP_GITHUB_FORCE_UPDATE', true );
+		if ( is_admin() ) { // note the use of is_admin() to double check that this is happening in the admin
+			$config = array(
+				'slug' => plugin_basename( __FILE__ ), // this is the slug of your plugin
+				'proper_folder_name' => 'ultimate-before-after-slider', // this is the name of the folder your plugin lives in
+				'api_url' => 'https://api.github.com/repos/isaumya/ultimate-before-after-slider-wordpress', // the GitHub API url of your GitHub repo
+				'raw_url' => 'https://raw.github.com/isaumya/ultimate-before-after-slider-wordpress/master', // the GitHub raw url of your GitHub repo
+				'github_url' => 'https://github.com/isaumya/ultimate-before-after-slider-wordpress', // the GitHub url of your GitHub repo
+				'zip_url' => 'https://github.com/isaumya/ultimate-before-after-slider-wordpress/archive/master.zip', // the zip url of the GitHub repo
+				'sslverify' => true, // whether WP should check the validity of the SSL cert when getting an update, see https://github.com/jkudish/WordPress-GitHub-Plugin-Updater/issues/2 and https://github.com/jkudish/WordPress-GitHub-Plugin-Updater/issues/4 for details
+				'requires' => '4.0', // which version of WordPress does your plugin require?
+				'tested' => '4.6.1', // which version of WordPress is your plugin tested up to?
+				'readme' => 'README.md', // which file to use as the readme for the version number
+				'access_token' => '', // Access private repositories by authorizing under Appearance > GitHub Updates when this example plugin is installed
+			);
+			new WP_GitHub_Updater( $config );
+		}
 	}
 }
 
