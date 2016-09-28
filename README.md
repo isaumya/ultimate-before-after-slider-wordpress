@@ -1,8 +1,6 @@
 # Ultimate Before After Slider for WordPress
 [![Powered by WordPress](https://i.imgur.com/TLxhYvJ.gif)](https://wordpress.org/)
 
-----------
-
 This is a before after image slider based on the before after slider showcased in [Kraken.io](https://kraken.io/) website. I made it for my [Best WordPress Image Compression Plugin](https://www.isaumya.com/finding-out-the-best-wordpress-image-compression-plugin/) testing atricle.
 
 [![Example Image](https://i.imgur.com/ABHvovw.jpg)](https://i.imgur.com/ABHvovw.jpg)
@@ -47,17 +45,10 @@ This is a before after image slider based on the before after slider showcased i
 
 [![Fill up the form and click OK](https://i.imgur.com/2sO0zeB.jpg)](https://i.imgur.com/2sO0zeB.jpg)
 
-
-----------
-
 ## Current Version
 This is plugin has been tested upto `WP v4.6.1` and minimum requirement is `WP v4.0` (as I haven't tested before that)
 
 ~Current Version:1.1~
-
-
-----------
-
 
 ## Changelog
 ### v1.1
@@ -67,9 +58,6 @@ This is plugin has been tested upto `WP v4.6.1` and minimum requirement is `WP v
 
 ### v1.0
 * Initial push to Github after local development testing and production usage
-
-
-----------
 
 ## Special Thanks
 * [Kraken.io](https://kraken.io/) for creating such an beautiful Before-After slider
