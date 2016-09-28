@@ -48,9 +48,12 @@ This is a before after image slider based on the before after slider showcased i
 ## Current Version
 This is plugin has been tested upto `WP v4.6.1` and minimum requirement is `WP v4.0` (as I haven't tested before that)
 
-~Current Version:1.1~
+~Current Version:1.2~
 
 ## Changelog
+### v1.2
+* Made some minor big fix in the folder name structure inside the `ultimate-before-after-slider.php` file Github auto updater section
+
 ### v1.1
 * Fixed the bug with unnecessary method call inside `ultimate-before-after-slider.php` file
 * Added the Github auto updater for WordPress feature
