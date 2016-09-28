@@ -48,9 +48,12 @@ This is a before after image slider based on the before after slider showcased i
 ## Current Version
 This is plugin has been tested upto `WP v4.6.1` and minimum requirement is `WP v4.0` (as I haven't tested before that)
 
-~Current Version:1.3~
+~Current Version:1.4~
 
 ## Changelog
+### v1.4
+* Removed unnecessary `console.log()` from `jquery.ubas.js` & `jquery.ubas.min.js` files
+
 ### v1.3
 * Fixed a CSS bug (specific to my site only, please check the comments of ubas.css file)
 

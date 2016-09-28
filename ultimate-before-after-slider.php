@@ -3,7 +3,7 @@
 Plugin Name: Ultimate Before After Slider
 Plugin URI:  https://github.com/isaumya/ultimate-before-after-slider-wordpress
 Description: Show before and after images with multiple slides
-Version:     1.3
+Version:     1.4
 Author:      Saumya Majumder
 Author URI:  https://www.isaumya.com/
 Text Domain: ubas

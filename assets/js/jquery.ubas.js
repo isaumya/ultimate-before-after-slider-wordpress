@@ -68,9 +68,6 @@ jQuery(function ($) {
 		      };
 
 		      var adjustContainer = function(offset) {
-
-		      	console.log( offset.cw );
-
 		        before.css("clip", "rect(0,"+offset.cw+","+offset.h+",0)");
 		        container.css("height", offset.h);
 		      };
